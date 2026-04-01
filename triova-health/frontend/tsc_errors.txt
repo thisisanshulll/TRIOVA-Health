@@ -1,0 +1,2 @@
+﻿tsconfig.json(31,18): error TS6306: Referenced project 'E:/College Work/TOVA/triova-health/frontend/tsconfig.node.json' must have setting "composite": true.
+tsconfig.json(31,18): error TS6310: Referenced project 'E:/College Work/TOVA/triova-health/frontend/tsconfig.node.json' may not disable emit.

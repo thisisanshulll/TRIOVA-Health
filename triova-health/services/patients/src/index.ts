@@ -1,0 +1,16 @@
+import express from 'express';
+import cors from 'cors';
+import helmet from 'helmet';
+import dotenv from 'dotenv';
+import { patientRoutes } from './routes/patients.routes';
+import { errorMiddleware } from '../../shared/middleware/error.middleware';
+import { logger } from '../../shared/utils/logger';
+dotenv.config();
+const app = express();
+const PORT = process.env.PATIENT_PORT || 3008;
+app.use(helmet()); app.use(cors({ origin: process.env.FRONTEND_URL, credentials: true })); app.use(express.json());
+app.get('/health', (_req, res) => res.json({ status: 'ok', service: 'patient-service' }));
+app.use('/api/patients', patientRoutes);
+app.use(errorMiddleware);
+app.listen(PORT, () => logger.info(`Patient service running on port ${PORT}`));
+export default app;

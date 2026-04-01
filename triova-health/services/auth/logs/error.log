@@ -1,0 +1,42 @@
+2026-04-02 02:39:59 [error]: BadRequestError: request aborted
+    at IncomingMessage.onAborted (E:\College Work\TOVA\triova-health\node_modules\raw-body\index.js:245:10)
+    at IncomingMessage.emit (node:events:508:28)
+    at IncomingMessage._destroy (node:_http_incoming:221:10)
+    at _destroy (node:internal/streams/destroy:122:10)
+    at IncomingMessage.destroy (node:internal/streams/destroy:84:5)
+    at abortIncoming (node:_http_server:845:9)
+    at socketOnClose (node:_http_server:839:3)
+    at Socket.emit (node:events:520:35)
+    at TCP.<anonymous> (node:net:346:12)
+{
+  "path": "/api/auth/login",
+  "method": "POST"
+}
+2026-04-02 02:41:29 [error]: BadRequestError: request aborted
+    at IncomingMessage.onAborted (E:\College Work\TOVA\triova-health\node_modules\raw-body\index.js:245:10)
+    at IncomingMessage.emit (node:events:508:28)
+    at IncomingMessage._destroy (node:_http_incoming:221:10)
+    at _destroy (node:internal/streams/destroy:122:10)
+    at IncomingMessage.destroy (node:internal/streams/destroy:84:5)
+    at abortIncoming (node:_http_server:845:9)
+    at socketOnClose (node:_http_server:839:3)
+    at Socket.emit (node:events:520:35)
+    at TCP.<anonymous> (node:net:346:12)
+{
+  "path": "/api/auth/login",
+  "method": "POST"
+}
+2026-04-02 02:44:05 [error]: BadRequestError: request aborted
+    at IncomingMessage.onAborted (E:\College Work\TOVA\triova-health\node_modules\raw-body\index.js:245:10)
+    at IncomingMessage.emit (node:events:508:28)
+    at IncomingMessage._destroy (node:_http_incoming:221:10)
+    at _destroy (node:internal/streams/destroy:122:10)
+    at IncomingMessage.destroy (node:internal/streams/destroy:84:5)
+    at abortIncoming (node:_http_server:845:9)
+    at socketOnClose (node:_http_server:839:3)
+    at Socket.emit (node:events:520:35)
+    at TCP.<anonymous> (node:net:346:12)
+{
+  "path": "/api/auth/login",
+  "method": "POST"
+}

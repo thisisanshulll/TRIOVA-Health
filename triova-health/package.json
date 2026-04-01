@@ -1,0 +1,33 @@
+{
+  "name": "triova-health",
+  "version": "1.0.0",
+  "description": "AI-Powered Healthcare Monorepo",
+  "private": true,
+  "workspaces": [
+    "services/*",
+    "frontend"
+  ],
+  "scripts": {
+    "dev:auth": "npm run dev --workspace=@triova/auth-service",
+    "dev:appointments": "npm run dev --workspace=@triova/appointment-service",
+    "dev:triage": "npm run dev --workspace=@triova/triage-service",
+    "dev:records": "npm run dev --workspace=@triova/medical-records-service",
+    "dev:notifications": "npm run dev --workspace=@triova/notification-service",
+    "dev:analytics": "npm run dev --workspace=@triova/analytics-service",
+    "dev:patients": "npm run dev --workspace=@triova/patient-service",
+    "dev:doctors": "npm run dev --workspace=@triova/doctor-service",
+    "dev:gateway": "npm run dev --workspace=@triova/gateway",
+    "dev:backend": "concurrently \"npm run dev:auth\" \"npm run dev:appointments\" \"npm run dev:triage\" \"npm run dev:records\" \"npm run dev:notifications\" \"npm run dev:analytics\" \"npm run dev:patients\" \"npm run dev:doctors\" \"npm run dev:gateway\"",
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev --workspace=frontend\"",
+    "docker:up": "docker-compose up -d",
+    "docker:down": "docker-compose down",
+    "postinstall": "npm install concurrently -g"
+  },
+  "author": "TRIOVA Team",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "dotenv": "^17.3.1",
+    "pg": "^8.20.0"
+  }
+}

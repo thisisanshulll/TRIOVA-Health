@@ -1,0 +1,45 @@
+﻿src/App.tsx(6,25): error TS2307: Cannot find module '@/components/ui/toaster' or its corresponding type declarations.
+src/hooks/useSocket.ts(23,39): error TS2339: Property 'env' does not exist on type 'ImportMeta'.
+src/pages/auth/LoginPage.tsx(3,21): error TS2307: Cannot find module '../lib/api' or its corresponding type declarations.
+src/pages/auth/LoginPage.tsx(4,30): error TS2307: Cannot find module '../stores/authStore' or its corresponding type declarations.
+src/pages/auth/LoginPage.tsx(5,24): error TS2307: Cannot find module '@/components/ui/button' or its corresponding type declarations.
+src/pages/auth/LoginPage.tsx(6,23): error TS2307: Cannot find module '@/components/ui/input' or its corresponding type declarations.
+src/pages/auth/LoginPage.tsx(7,23): error TS2307: Cannot find module '@/components/ui/label' or its corresponding type declarations.
+src/pages/auth/LoginPage.tsx(8,87): error TS2307: Cannot find module '@/components/ui/card' or its corresponding type declarations.
+src/pages/auth/LoginPage.tsx(9,26): error TS2307: Cannot find module '@/components/ui/use-toast' or its corresponding type declarations.
+src/pages/auth/LoginPage.tsx(59,27): error TS7006: Parameter 'e' implicitly has an 'any' type.
+src/pages/auth/LoginPage.tsx(72,27): error TS7006: Parameter 'e' implicitly has an 'any' type.
+src/pages/auth/RegisterPage.tsx(3,21): error TS2307: Cannot find module '../lib/api' or its corresponding type declarations.
+src/pages/auth/RegisterPage.tsx(4,30): error TS2307: Cannot find module '../stores/authStore' or its corresponding type declarations.
+src/pages/auth/RegisterPage.tsx(5,24): error TS2307: Cannot find module '@/components/ui/button' or its corresponding type declarations.
+src/pages/auth/RegisterPage.tsx(6,23): error TS2307: Cannot find module '@/components/ui/input' or its corresponding type declarations.
+src/pages/auth/RegisterPage.tsx(7,23): error TS2307: Cannot find module '@/components/ui/label' or its corresponding type declarations.
+src/pages/auth/RegisterPage.tsx(8,87): error TS2307: Cannot find module '@/components/ui/card' or its corresponding type declarations.
+src/pages/auth/RegisterPage.tsx(9,26): error TS2307: Cannot find module '@/components/ui/use-toast' or its corresponding type declarations.
+src/pages/doctor/DoctorDashboard.tsx(4,75): error TS2307: Cannot find module '@/components/ui/card' or its corresponding type declarations.
+src/pages/doctor/DoctorDashboard.tsx(5,23): error TS2307: Cannot find module '@/components/ui/badge' or its corresponding type declarations.
+src/pages/doctor/DoctorDashboard.tsx(30,61): error TS6133: 'patient_alerts' is declared but its value is never read.
+src/pages/patient/AppointmentsList.tsx(4,29): error TS6133: 'CardHeader' is declared but its value is never read.
+src/pages/patient/AppointmentsList.tsx(4,41): error TS6133: 'CardTitle' is declared but its value is never read.
+src/pages/patient/AppointmentsList.tsx(4,52): error TS6133: 'CardDescription' is declared but its value is never read.
+src/pages/patient/AppointmentsList.tsx(4,75): error TS2307: Cannot find module '@/components/ui/card' or its corresponding type declarations.
+src/pages/patient/AppointmentsList.tsx(5,24): error TS2307: Cannot find module '@/components/ui/button' or its corresponding type declarations.
+src/pages/patient/AppointmentsList.tsx(6,23): error TS2307: Cannot find module '@/components/ui/badge' or its corresponding type declarations.
+src/pages/patient/AppointmentsList.tsx(7,26): error TS2307: Cannot find module '@/components/ui/use-toast' or its corresponding type declarations.
+src/pages/patient/AppointmentsList.tsx(8,81): error TS2307: Cannot find module '@/components/ui/dialog' or its corresponding type declarations.
+src/pages/patient/AppointmentsList.tsx(9,26): error TS2307: Cannot find module '@/components/ui/calendar' or its corresponding type declarations.
+src/pages/patient/AppointmentsList.tsx(105,32): error TS7006: Parameter 'date' implicitly has an 'any' type.
+src/pages/patient/MedicalRecords.tsx(4,75): error TS2307: Cannot find module '@/components/ui/card' or its corresponding type declarations.
+src/pages/patient/MedicalRecords.tsx(5,24): error TS2307: Cannot find module '@/components/ui/button' or its corresponding type declarations.
+src/pages/patient/MedicalRecords.tsx(6,23): error TS2307: Cannot find module '@/components/ui/input' or its corresponding type declarations.
+src/pages/patient/MedicalRecords.tsx(7,26): error TS2307: Cannot find module '@/components/ui/use-toast' or its corresponding type declarations.
+src/pages/patient/MedicalRecords.tsx(9,28): error TS2307: Cannot find module '@/components/ui/scroll-area' or its corresponding type declarations.
+src/pages/patient/MedicalRecords.tsx(173,27): error TS7006: Parameter 'e' implicitly has an 'any' type.
+src/pages/patient/PatientDashboard.tsx(5,75): error TS2307: Cannot find module '@/components/ui/card' or its corresponding type declarations.
+src/pages/patient/PatientDashboard.tsx(6,27): error TS6133: 'Thermometer' is declared but its value is never read.
+src/pages/patient/PatientDashboard.tsx(7,24): error TS2307: Cannot find module '@/components/ui/button' or its corresponding type declarations.
+src/pages/patient/TriageFlow.tsx(4,70): error TS2307: Cannot find module '@/components/ui/card' or its corresponding type declarations.
+src/pages/patient/TriageFlow.tsx(5,24): error TS2307: Cannot find module '@/components/ui/button' or its corresponding type declarations.
+src/pages/patient/TriageFlow.tsx(6,23): error TS2307: Cannot find module '@/components/ui/input' or its corresponding type declarations.
+src/pages/patient/TriageFlow.tsx(7,26): error TS2307: Cannot find module '@/components/ui/use-toast' or its corresponding type declarations.
+src/pages/patient/TriageFlow.tsx(185,25): error TS7006: Parameter 'e' implicitly has an 'any' type.

@@ -1,0 +1,69 @@
+name: TRIOVA Health Platform CI/CD
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [20.x]
+        
+    services:
+      postgres:
+        image: postgres:15-alpine
+        env:
+          POSTGRES_USER: triova_admin
+          POSTGRES_PASSWORD: triova_secret_dev
+          POSTGRES_DB: triova_health
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+      redis:
+        image: redis:7-alpine
+        ports:
+          - 6379:6379
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
+
+    - name: Install Monorepo Dependencies
+      run: npm install
+
+    - name: Type Check Services
+      run: |
+        cd services/shared && tsc --noEmit
+        cd ../auth && tsc --noEmit
+        cd ../patients && tsc --noEmit
+        cd ../doctors && tsc --noEmit
+        cd ../appointments && tsc --noEmit
+        cd ../triage && tsc --noEmit
+        cd ../medical-records && tsc --noEmit
+        cd ../analytics && tsc --noEmit
+        cd ../notifications && tsc --noEmit
+        cd ../gateway && tsc --noEmit
+
+    - name: Build Frontend
+      run: |
+        cd frontend
+        npm run build
+
+    - name: Lint Codebase
+      run: npm run lint --if-present
+
+    # We skip actual e2e/integration tests in CI if they require OpenAI/external keys unless mocked,
+    # but the pipeline ensures TypeScript integrity and successful frontend builds.
